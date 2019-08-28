@@ -1,0 +1,485 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Open-Source-Software</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+        <!--link rel="stylesheet" href="css/theme/black.css"-->
+        <!--link rel="stylesheet" href="css/theme/white.css"-->
+        <link rel="stylesheet" href="plugin/title-footer/title-footer.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+        
+        <style type="text/css">
+            .hangingindent {
+                padding-left: 22px ;
+                text-indent: -22px ;
+            }
+        </style>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+                <section data-state="no-title-footer">
+                    <h1>Open-Source-Software</h1>
+                    <p>
+                        Roundtable Digitale Strategien<br/>
+                        <small>
+                        beim <a href="https://www.digis-berlin.de/">Forschungs- und Kompetenzzentrum Digitalisierung Berlin (digiS)</a><br/>
+                        Zuse-Institut Berlin, 2019-08-29
+                        </small>
+                    </p>
+                    <p>&nbsp;</p>
+                    <p>
+                        <small>
+                            Heinz-Günter Kuper &lt;<a href="mailto:kuper@zib.de">kuper@zib.de</a>&gt;<br/>
+                            <a href="https://orcid.org/0000-0003-0743-3346">https://orcid.org/0000-0003-0743-3346</a><br/>
+                        </small>
+                    </p>
+                </section>
+				
+                <section>
+                    <section>
+                        <h2>Was ist Open-Source-Software?</h2>
+                        <aside class="notes">
+                            Schnell Durchlauf des Themas, Links und Hinweise auf weiterführende Informationen.
+                        </aside>
+                    </section>
+                    <section>
+                        <iframe class="stretch" data-src="https://de.wikipedia.org/wiki/Open_Source"></iframe>
+                        <small>Quelle: <a href="https://de.wikipedia.org/wiki/Open_Source">https://de.wikipedia.org/wiki/Open_Source</a></small>
+                        <aside class="notes">
+                            Eine Definition, aus Wikipedia (Open-Source-Wissen verteilt auf Open-Source-Software).
+                        </aside>
+                    </section>
+                    <section>
+                        Der Begriff "Open Source" wurde von Christine Peterson bei einem Strategie-Treffen am 1998-02-03 in Palo Alto, Kalifornien, geprägt.
+                    </section>
+                    <section>
+                        <quote>"The conferees believed the <em>pragmatic, business-case grounds</em> that had motivated Netscape to release their code illustrated a valuable way to engage with potential software users and developers, and convince them to create and improve source code by participating in an engaged community."</quote>
+                    </section>
+                    <section>
+                        <p><quote>"The conferees also believed that it would be useful to have a single label that identified this approach and distinguished it from the philosophically- and politically-focused label 'free software.'"</quote></p>
+                        <p><small>Quelle: <a href="https://opensource.org/history">https://opensource.org/history</a> (Letzter Aufruf: 2019-08-27)</small></p>
+                    </section>
+                    <section>
+                        <!--iframe class="stretch" data-src="https://groups.google.com/forum/m/?#!msg/comp.os.minix/dlNtH7RRrGA/SwRavCzVE7gJ"></iframe-->
+                        <img src="images/comp.os.minix.png" height="485" width="512"/>
+                        <small>Am 1991-08-25 kündigt Linux Benedict Torvalds auf comp.os.minix den Start von Linux an.<br />
+                            Quelle: <a href="https://groups.google.com/forum/#!msg/comp.os.minix/dlNtH7RRrGA/SwRavCzVE7gJ">https://groups.google.com/forum/#!msg/comp.os.minix/dlNtH7RRrGA/SwRavCzVE7gJ</a></small>
+                        <aside class="notes">
+                            <ul>
+                                <li>Startschuss von Linux vor 28 Jahren.</li>
+                                <li>https://en.wikipedia.org/wiki/MINIX</li>
+                                <ul>
+                                    <li>"MINIX (from "mini-Unix") is a POSIX-compliant (since version 2.0),[3][4] Unix-like operating system based on a microkernel architecture. Early versions of MINIX were created by Andrew S. Tanenbaum for educational purposes."</li>
+                                </ul>
+                                <li>https://en.wikipedia.org/wiki/IBM_Personal_Computer/AT</li>
+                                <ul>
+                                    <li>"The <b>IBM Personal Computer AT</b>, more commonly known as the IBM AT and also sometimes called the PC AT or PC/AT, was IBM's second-generation PC, designed around the 6 MHz Intel 80286 microprocessor and released in 1984 as System Unit 5170. The name AT stood for "<b>Advanced Technology</b>," and was chosen because the AT offered various technologies that were then new in personal computers[…]"</li>
+                                </ul>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <quote>
+                            <p>"[M]ost important software […] needed to be built like <em>cathedrals</em>, carefully crafted by individual wizards or small bands of mages working in splendid isolation, with no beta to be released before its time.</p>
+                            <p>[…T]he Linux community seemed to resemble a great babbling <em>bazaar</em> of differing agendas and approaches […] out of which a coherent and stable system could seemingly emerge only by a succession of miracles."</p>
+                        </quote>
+                        <small>Quelle: <a href="http://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/cathedral-bazaar.ps"><i>The Cathedral and the Bazaar</i></a>, Eric S. Raymond, S. 2–3<br />
+                        (Erst vorgestellt am 1997-05-27 beim Linux Kongress in Würzburg)</small>
+                        <aside class="notes">
+                            Der Essay hat Netscape dazu bewegt, den Quellcode für den Netscape Communicator offen zu stellen, was dann durch Mozilla weitergeführt worden ist.
+                        </aside>
+                    </section>
+                    <section>
+                        <p>Unterscheidung zwischen <em>frei</em> ("free as in beer") und <em>libre</em> ("free as in speech").</p>
+                        <aside class="notes">
+                            Notes
+                        </aside>
+                    </section>
+                    <section>
+                        <img src="images/OSS+Freeware.png" style="background-color:white;" />
+                        <aside class="notes">
+                            "Freeware is software, most often proprietary, that is distributed at no monetary cost to the end user." (https://en.wikipedia.org/w/index.php?title=Freeware&oldid=911301455)
+                        </aside>
+                    </section>
+                    <section>
+                        <ul>
+                            <li class="fragment fade-in" data-fragment-index="1">Proprietäre Software</li>
+                            <li class="fragment fade-in" data-fragment-index="2">Freeware: meistens proprietär, darf aber kostenlos genutzt werden.</li>
+                            <li class="fragment fade-in" data-fragment-index="3">Open Source: quelloffen, aber source code muss nicht mit executables verteilt werden, nicht unbedingt kostenlos</li>
+                            <li class="fragment fade-in" data-fragment-index="4">Free Software: quelloffen und sourcecode muss verteilt werden, nicht unbedingt kostenlos</li>
+                            <li class="fragment fade-in" data-fragment-index="5">… deshalb oft als "FLOSS" bezeichnet: Free/libre and open-source software.</li>
+                        </ul>
+                        <aside class="notes">
+                            <ul>
+                                <li>https://de.wikipedia.org/wiki/Freeware</li>
+                                <li>https://en.wikipedia.org/wiki/Free_software_(disambiguation)</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <iframe src="https://giphy.com/embed/GXcdbaBFH6y3u" width="960" height="488" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><small><a href="https://giphy.com/gifs/GXcdbaBFH6y3u">via GIPHY</a></small></p>
+                        <aside class="notes">
+                            Ich hoffe nicht, dass Sie sich so ratlos fühlen.<br />
+                            Take home message: Es gibt subtile Unterschiede, über die sich einige aufregen, aber im Großen und Ganzen heißt "Open-Source" lediglich "quelloffen" und alles weitere ergibt sich vom Fall zu Fall.
+                        </aside>
+                    </section>
+                </section>
+                
+                <section>
+                    <section>
+                        <h2>Schnellübersicht der FLOSS-Lizenzen</h2>
+                        <aside class="notes">Betonung auf "schnell" – man kann sich sehr lange mit dem Thema befassen.</aside>
+                    </section>
+                    <section>
+                        <iframe class="stretch" data-src="https://en.wikipedia.org/wiki/Comparison_of_free_and_open-source_software_licenses"></iframe>
+                        <small>Quelle: <a href="https://en.wikipedia.org/wiki/Comparison_of_free_and_open-source_software_licenses">https://en.wikipedia.org/wiki/Comparison_of_free_and_open-source_software_licenses</a></small>
+                        <aside class="notes">
+                            My notes.
+                        </aside>
+                    </section>
+                    <section>
+                        <iframe class="stretch" data-src="https://choosealicense.com/licenses/"></iframe>
+                        <small>Quelle: <a href="https://choosealicense.com/licenses/">https://choosealicense.com/licenses/</a></small>
+                        <aside class="notes">
+                            My notes.
+                        </aside>
+                    </section>
+                    <section>
+                        <h4>Special Mention: WTFPL</h4>
+                        <a href="http://www.wtfpl.net/" data-preview-link><img src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-1.png" width="88" height="31" alt="WTFPL" /></a>
+                        <aside class="notes">
+                            Habe ich persönlich in freier Wildbahn bisher nicht angetroffen, aber sie drückt die Frustration mit der Lizenzvielfalt treffend aus.<br />
+                            Mehr: https://en.wikipedia.org/wiki/WTFPL
+                        </aside>
+                    </section>
+                    <!--section>
+                        <p>Wichtigste Lizenzen:</p>
+                        <ul>
+                            <li class="fragment fade-in" data-fragment-index="1">Apache 2</li>
+                            <li class="fragment fade-in" data-fragment-index="2">GPL</li>
+                            <li class="fragment fade-in" data-fragment-index="3">MIT</li>
+                        </ul>
+                    </section-->
+                </section>
+                <section>
+                    <section>
+                        <h2>Open-Source-Geschäftsmodelle (Eine Auswahl)</h2>
+                    </section>
+                    <section>
+                        <h4>Das Partner-Geschäftsmodell</h4>
+                        <a href="https://moodle.com/partners/" data-preview-link>Moodle Partners</a>
+                        <aside class="notes">
+                            <ul>
+                                <li>Partner zahlen Geld an Moodle um eine Zertifizierung zu erhalten.</li>
+                                <li>Von Martin Dougiamas ins Leben gerufen. (https://en.wikipedia.org/wiki/Moodle)</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <h4>Duale Lizenzierung</h4>
+                        <a href="https://moodle.com/partners/" data-preview-link>?</a>
+                        <aside class="notes">
+                            <ul>
+                                <li>notes</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Freemium</h2>
+                        <p>Basis bzw. ältere Version kostenlos, aber aktuelle bzw. erweiterte Version nur gegen Geld. https://de.wikipedia.org/wiki/Freemium</p>
+                        <aside class="notes">
+                            My notes.
+                        </aside>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Merkmale eines vertrauenswürdigen Open-Source-Projekts</h2>
+                    </section>
+                    <section>
+                        <h4>Projektzustand</h4>
+                        <ul>
+                            <li>Vielfalt der beteiligten EntwicklerInnen</li>
+                            <li>Häufigkeit von Commits</li>
+                            <li>Aktualität des Projekts (wann angefangen, wann letzter Commit?)</li>
+                        </ul>
+                        <aside class="notes">
+                            NOTES
+                        </aside>
+                    </section>
+                    <section>
+                        <h4>Community-Zustand</h4>
+                        <ul>
+                            <li>Werden Fehler (<em>bug reports</em>) schnell bearbeitet?</li>
+                            <li>Gibt es eine aktive Mailingliste?</li>
+                            <li>Gibt es Dokumentation (z. B. ein Wiki)?</li>
+                            <li>Wie aktuell ist die Dokumentation?</li>
+                        </ul>
+                        <aside class="notes">
+                            Die Kriterien sollen in ihrer Gesamtheit bzw. im Kontext begutachtet werden, kein Kriterium alleine reicht aus, um ein Projekt zu bewerten. Z. B. könnte eine inaktive Mailingliste zeichen von einem reifen Projekt sein.
+                        </aside>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Beispiele von Open-Source-Anwendungen</h2>
+                    </section>
+                    <section>
+                        <h2>CollectiveAccess</h2>
+                        <ul>
+                            <li><a href="https://collectiveaccess.org/">https://collectiveaccess.org/</a></li>
+                            <li><a href="https://github.com/collectiveaccess">https://github.com/collectiveaccess</a></li>
+                                <ul><li><a href="https://github.com/collectiveaccess/providence/blob/master/License.txt">Lizenz</a></li></ul>
+                            <li><a href="http://collectiveaccesscommunity.org">http://collectiveaccesscommunity.org</a></li>                            
+                        </ul>
+                        <aside class="notes">
+                            My notes.
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Omeka</h2>
+                        <ul>
+                            <li><a href="https://omeka.org/" data-preview-link>Omeka</a></li>
+                            <li><a href="https://github.com/omeka">Omeka auf GitHub</a></li>
+                        </ul>
+                        <aside class="notes">
+                            Lizenz: GPL
+                        </aside>
+                    </section>
+                    <section>
+                        <p>WordPress</p>
+                        <aside class="notes">
+                            My notes.
+                        </aside>
+                    </section>
+                    <section>
+                        <p>Archivematica</p>
+                        <aside class="notes">
+                            My notes.
+                        </aside>
+                    </section>
+                    <section>
+                        <p>FEDORA/Duraspace</p>
+                        <aside class="notes">
+                            My notes.
+                        </aside>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Referenzen und weiterführende Links</h2>
+                    </section>
+                    <section>
+                        <h3>Texte</h3>
+                        <p align="left" class="hangingindent">Grassmuck, Volker: <em>Freie Software: Zwischen Privat- und Gemeineigentum</em>. Bundeszentrale für politische Bildung, Bonn, 2002.<br/><small class="hangingindent"><a href="http://freie-software.bpb.de/">http://freie-software.bpb.de/</a> (letzter Aufruf am 2019-08-22)</small></p>
+                        <p align="left" class="hangingindent">Raymond, Eric S.: <em>The Cathedral and the Bazaar</em>. 2000.<br/><small class="hangingindent"><a href="http://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/">http://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/</a> (letzter Aufruf am 2019-08-22)</small></p>
+                    </section>
+                    <section>
+                        <h3>Links</h3>
+                        <p align="left"><a href="https://wiki.opensourceecology.de/Vorteile/Nachteile_von_Open_Source_Software">Vorteile/Nachteile von Open Source Software</a><br />
+                    <small>(Letzter Aufruf am 2019-08-27)</small></p>  
+                    </section>
+                </section>
+                <section>
+                    <p style="font-weight: bold !important; font-size: 1.5em !important;">
+                        Vielen Dank für Ihre Aufmerksamkeit!
+                    </p>
+                    <p>&nbsp;</p>
+                    <p align="left">
+                        Die Folien sind online:
+                        <ul>
+                            <li style="font-size: 1.5em !important;">https://git.io/fjxfP</li>
+                            <li>https://hgkuper.github.io/presentations/oss</li>
+                            <li>PDF-Version</li>
+                        </ul>
+                    </p>
+                </section>
+                <section>
+                    <h2>CC BY 4.0</h2>
+                    <p>
+                        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Dieses Werk ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Namensnennung 4.0 International Lizenz</a>.
+                    </p>
+                </section>
+			</div>
+        </div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true },                    
+                    { src: 'plugin/zoom-js/zoom.js', async: true }, // Zoom in and out with Alt+click
+                    { src: 'plugin/title-footer/title-footer.js', async: true, callback: function() { title_footer.initialize("Open-Source-Software | digiS, 2019-08-29 | Heinz-Günter Kuper | CC BY 4.0"); } }
+				],
+                // added by HGK
+                // Display presentation control arrows
+                controls: false,
+
+                // Help the user learn the controls by providing hints, for example by
+                // bouncing the down arrow when they first encounter a vertical slide
+                controlsTutorial: false,
+
+                // Determines where controls appear, "edges" or "bottom-right"
+                controlsLayout: 'bottom-right',
+
+                // Visibility rule for backwards navigation arrows; "faded", "hidden"
+                // or "visible"
+                controlsBackArrows: 'faded',
+
+                // Display a presentation progress bar
+                progress: true,
+
+                // Display the page number of the current slide
+                slideNumber: true,
+
+                // Add the current slide number to the URL hash so that reloading the
+                // page/copying the URL will return you to the same slide
+                hash: true,
+
+                // Push each slide change to the browser history. Implies `hash: true`
+                history: false,
+
+                // Enable keyboard shortcuts for navigation
+                keyboard: true,
+
+                // Enable the slide overview mode
+                overview: true,
+
+                // Vertical centering of slides
+                center: true,
+
+                // Enables touch navigation on devices with touch input
+                touch: true,
+
+                // Loop the presentation
+                loop: false,
+
+                // Change the presentation direction to be RTL
+                rtl: false,
+
+                // See https://github.com/hakimel/reveal.js/#navigation-mode
+                navigationMode: 'default',
+
+                // Randomizes the order of slides each time the presentation loads
+                shuffle: false,
+
+                // Turns fragments on and off globally
+                fragments: true,
+
+                // Flags whether to include the current fragment in the URL,
+                // so that reloading brings you to the same fragment position
+                fragmentInURL: false,
+
+                // Flags if the presentation is running in an embedded mode,
+                // i.e. contained within a limited portion of the screen
+                embedded: false,
+
+                // Flags if we should show a help overlay when the questionmark
+                // key is pressed
+                help: true,
+
+                // Flags if speaker notes should be visible to all viewers
+                showNotes: false,
+
+                // Global override for autoplaying embedded media (video/audio/iframe)
+                // - null: Media will only autoplay if data-autoplay is present
+                // - true: All media will autoplay, regardless of individual setting
+                // - false: No media will autoplay, regardless of individual setting
+                autoPlayMedia: null,
+
+                // Global override for preloading lazy-loaded iframes
+                // - null: Iframes with data-src AND data-preload will be loaded when within
+                //   the viewDistance, iframes with only data-src will be loaded when visible
+                // - true: All iframes with data-src will be loaded when within the viewDistance
+                // - false: All iframes with data-src will be loaded only when visible
+                preloadIframes: null,
+
+                // Number of milliseconds between automatically proceeding to the
+                // next slide, disabled when set to 0, this value can be overwritten
+                // by using a data-autoslide attribute on your slides
+                autoSlide: 0,
+
+                // Stop auto-sliding after user input
+                autoSlideStoppable: true,
+
+                // Use this method for navigation when auto-sliding
+                autoSlideMethod: Reveal.navigateNext,
+
+                // Specify the average time in seconds that you think you will spend
+                // presenting each slide. This is used to show a pacing timer in the
+                // speaker view
+                defaultTiming: 60,
+
+                // Enable slide navigation via mouse wheel
+                mouseWheel: false,
+
+                // Hide cursor if inactive
+                hideInactiveCursor: true,
+
+                // Time before the cursor is hidden (in ms)
+                hideCursorTime: 5000,
+
+                // Hides the address bar on mobile devices
+                hideAddressBar: true,
+
+                // Opens links in an iframe preview overlay
+                // Add `data-preview-link` and `data-preview-link="false"` to customise each link
+                // individually
+                previewLinks: false,
+
+                // Transition style
+                transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+                // Transition speed
+                transitionSpeed: 'default', // default/fast/slow
+
+                // Transition style for full page slide backgrounds
+                backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
+
+                // Number of slides away from the current that are visible
+                viewDistance: 3,
+
+                // Parallax background image
+                parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+                // Parallax background size
+                parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px"
+
+                // Number of pixels to move the parallax background per slide
+                // - Calculated automatically unless specified
+                // - Set to 0 to disable movement along an axis
+                parallaxBackgroundHorizontal: null,
+                parallaxBackgroundVertical: null,
+
+                // The display mode that will be used to show slides
+                display: 'block'
+			});
+		</script>
+	</body>
+</html>
