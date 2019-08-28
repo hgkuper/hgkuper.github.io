@@ -36,24 +36,40 @@
 		<div class="reveal">
 			<div class="slides">
 				
-                <section data-state="no-title-footer">
-                    <h1>Open-Source-Software</h1>
-                    <p>
-                        Roundtable Digitale Strategien<br/>
-                        <small>
-                        beim <a href="https://www.digis-berlin.de/">Forschungs- und Kompetenzzentrum Digitalisierung Berlin (digiS)</a><br/>
-                        Zuse-Institut Berlin, 2019-08-29
-                        </small>
-                    </p>
-                    <p>&nbsp;</p>
-                    <p>
-                        <small>
-                            Heinz-Günter Kuper &lt;<a href="mailto:kuper@zib.de">kuper@zib.de</a>&gt;<br/>
-                            <a href="https://orcid.org/0000-0003-0743-3346">https://orcid.org/0000-0003-0743-3346</a><br/>
-                        </small>
-                    </p>
+                <section>
+                    <section data-state="no-title-footer">
+                        <h1>Open-Source-Software</h1>
+                        <p>
+                            Roundtable Digitale Strategien<br/>
+                            <small>
+                            beim <a href="https://www.digis-berlin.de/">Forschungs- und Kompetenzzentrum Digitalisierung Berlin (digiS)</a><br/>
+                            Zuse-Institut Berlin, 2019-08-29
+                            </small>
+                        </p>
+                        <p>&nbsp;</p>
+                        <p>
+                            <small>
+                                Heinz-Günter Kuper &lt;<a href="mailto:kuper@zib.de">kuper@zib.de</a>&gt;<br/>
+                                <a href="https://orcid.org/0000-0003-0743-3346">https://orcid.org/0000-0003-0743-3346</a><br/>
+                            </small>
+                        </p>
+                        <aside class="notes">
+                            Ich verwende viel Open Source bei der Entwicklung und bei der Arbeit (LibreOffice)<br />
+                            HyperImage: Zusammen mit einem Kollegen bin ich selber Open Source Maintainer von einem bescheidenen Projekt</aside>
+                    </section>
+                    <section>
+                        <h3>Übersicht</h3>
+                        <ol>
+                            <li>Was ist Open-Source-Software?</li>
+                            <li>Schnellübersicht der FLOSS-Lizenzen</li>
+                            <li>Open-Source-Geschäftsmodelle (Eine Auswahl)</li>
+                            <li>Merkmale eines vertrauenswürdigen Open-Source-Projekts</li>
+                            <li>Beispiele von Open-Source-Anwendungen</li>
+                        </ol>
+                    </section>
                 </section>
-				
+
+                
                 <section>
                     <section>
                         <h2>Was ist Open-Source-Software?</h2>
@@ -65,7 +81,9 @@
                         <iframe class="stretch" data-src="https://de.wikipedia.org/wiki/Open_Source"></iframe>
                         <small>Quelle: <a href="https://de.wikipedia.org/wiki/Open_Source">https://de.wikipedia.org/wiki/Open_Source</a></small>
                         <aside class="notes">
-                            Eine Definition, aus Wikipedia (Open-Source-Wissen verteilt auf Open-Source-Software).
+                            <p>Eine Definition, aus Wikipedia (Open-Source-Wissen verteilt auf Open-Source-Software).</p>
+                            <p>OSI: Open Source Initiative</p>
+                            <p>Um zu verstehen, was OSS ist, ist es hilfreich die Geschichte des Begriffs zu verstehen.</p>
                         </aside>
                     </section>
                     <section>
@@ -109,24 +127,33 @@
                         </aside>
                     </section>
                     <section>
-                        <p>Unterscheidung zwischen <em>frei</em> ("free as in beer") und <em>libre</em> ("free as in speech").</p>
+                        <p>Unterscheidung zwischen <em>frei</em> ("free as in beer"/gratis) und <em>libre</em> ("free as in speech"/liberty).</p>
                         <aside class="notes">
                             Notes
                         </aside>
                     </section>
-                    <section>
+                    <!--section>
                         <img src="images/OSS+Freeware.png" style="background-color:white;" />
                         <aside class="notes">
                             "Freeware is software, most often proprietary, that is distributed at no monetary cost to the end user." (https://en.wikipedia.org/w/index.php?title=Freeware&oldid=911301455)
                         </aside>
+                    </section-->
+                    <section>
+                        <ol>
+                            <li>1991-08-25: Start von Linux</li>
+                            <li>1997-05-27: <em>The Cathedral and the Bazaar</em></li>
+                            <li>1998-01-22: Netscape kündigt die Veröffentlichung des Sourcecodes von Netscape Communicator 5.0 an</li>
+                            <li>1998-02-03: Der Begriff "Open Source" wird geprägt</li>
+                        </ol>
+                        <aside class="notes">https://www-archive.mozilla.org/src-faq.html</aside>
                     </section>
                     <section>
                         <ul>
-                            <li class="fragment fade-in" data-fragment-index="1">Proprietäre Software</li>
-                            <li class="fragment fade-in" data-fragment-index="2">Freeware: meistens proprietär, darf aber kostenlos genutzt werden.</li>
-                            <li class="fragment fade-in" data-fragment-index="3">Open Source: quelloffen, aber source code muss nicht mit executables verteilt werden, nicht unbedingt kostenlos</li>
-                            <li class="fragment fade-in" data-fragment-index="4">Free Software: quelloffen und sourcecode muss verteilt werden, nicht unbedingt kostenlos</li>
-                            <li class="fragment fade-in" data-fragment-index="5">… deshalb oft als "FLOSS" bezeichnet: Free/libre and open-source software.</li>
+                            <li class="fragment fade-in" data-fragment-index="1"><strong>Proprietäre Software</strong></li>
+                            <li class="fragment fade-in" data-fragment-index="2"><strong>Freeware</strong>: meistens proprietär, darf aber kostenlos genutzt werden.</li>
+                            <li class="fragment fade-in" data-fragment-index="3"><strong>Open Source</strong>: quelloffen, aber Sourcecode nicht zwangsläufig mit Anwendung zu verteilen und nicht unbedingt kostenlos.</li>
+                            <li class="fragment fade-in" data-fragment-index="4"><strong>Free Software</strong>: quelloffen und Sourcecode muss verteilt werden (aber auch nicht unbedingt kostenlos).</li>
+                            <li class="fragment fade-in" data-fragment-index="5">… deshalb den Sammelbegriff "<strong>FLOSS</strong>": Free/libre and open-source software.</li>
                         </ul>
                         <aside class="notes">
                             <ul>
@@ -138,11 +165,12 @@
                     <section>
                         <iframe src="https://giphy.com/embed/GXcdbaBFH6y3u" width="960" height="488" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><small><a href="https://giphy.com/gifs/GXcdbaBFH6y3u">via GIPHY</a></small></p>
                         <aside class="notes">
-                            Ich hoffe nicht, dass Sie sich so ratlos fühlen.<br />
+                            Ich hoffe, dass Sie nicht so verwirrt sind wie Pete Hogwallop hier. ("Pete Hogwallop"/John Turturro)<br />
                             Take home message: Es gibt subtile Unterschiede, über die sich einige aufregen, aber im Großen und Ganzen heißt "Open-Source" lediglich "quelloffen" und alles weitere ergibt sich vom Fall zu Fall.
                         </aside>
                     </section>
                 </section>
+ 
                 
                 <section>
                     <section>
@@ -167,6 +195,7 @@
                         <h4>Special Mention: WTFPL</h4>
                         <a href="http://www.wtfpl.net/" data-preview-link><img src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-1.png" width="88" height="31" alt="WTFPL" /></a>
                         <aside class="notes">
+                            Do What the Fuck You Want to Public Licence<br />
                             Habe ich persönlich in freier Wildbahn bisher nicht angetroffen, aber sie drückt die Frustration mit der Lizenzvielfalt treffend aus.<br />
                             Mehr: https://en.wikipedia.org/wiki/WTFPL
                         </aside>
@@ -180,12 +209,14 @@
                         </ul>
                     </section-->
                 </section>
+                
+                
                 <section>
                     <section>
                         <h2>Open-Source-Geschäftsmodelle (Eine Auswahl)</h2>
                     </section>
                     <section>
-                        <h4>Das Partner-Geschäftsmodell</h4>
+                        <h3>Das Partner-Geschäftsmodell</h3>
                         <a href="https://moodle.com/partners/" data-preview-link>Moodle Partners</a>
                         <aside class="notes">
                             <ul>
@@ -195,28 +226,35 @@
                         </aside>
                     </section>
                     <section>
-                        <h4>Duale Lizenzierung</h4>
-                        <a href="https://moodle.com/partners/" data-preview-link>?</a>
+                        <h3>Duale Lizenzierung / Freemium</h3>
+                        <p>Basis- bzw. ältere Version kostenlos, aber aktuelle bzw. erweiterte Version nur gegen Geld.</p>
                         <aside class="notes">
-                            <ul>
-                                <li>notes</li>
-                            </ul>
+                            https://de.wikipedia.org/wiki/Freemium
                         </aside>
                     </section>
                     <section>
-                        <h2>Freemium</h2>
-                        <p>Basis bzw. ältere Version kostenlos, aber aktuelle bzw. erweiterte Version nur gegen Geld. https://de.wikipedia.org/wiki/Freemium</p>
+                        <h3>Spenden</h3>
+                        <p>Entwicklung wird mittels Spenden finanziert.</p>
                         <aside class="notes">
-                            My notes.
+                            …
+                        </aside>
+                    </section>
+                    <section>
+                        <h3>Mehr Infos</h3>
+                        <a href="https://de.wikipedia.org/wiki/Gesch%C3%A4ftsmodelle_f%C3%BCr_Open-Source-Software">https://de.wikipedia.org/wiki/Geschäftsmodelle_für_Open-Source-Software</a>
+                        <aside class="notes">
+                            …
                         </aside>
                     </section>
                 </section>
+                
+                
                 <section>
                     <section>
                         <h2>Merkmale eines vertrauenswürdigen Open-Source-Projekts</h2>
                     </section>
                     <section>
-                        <h4>Projektzustand</h4>
+                        <h3>Projektzustand</h3>
                         <ul>
                             <li>Vielfalt der beteiligten EntwicklerInnen</li>
                             <li>Häufigkeit von Commits</li>
@@ -227,7 +265,7 @@
                         </aside>
                     </section>
                     <section>
-                        <h4>Community-Zustand</h4>
+                        <h3>Community-Zustand</h3>
                         <ul>
                             <li>Werden Fehler (<em>bug reports</em>) schnell bearbeitet?</li>
                             <li>Gibt es eine aktive Mailingliste?</li>
@@ -239,13 +277,15 @@
                         </aside>
                     </section>
                 </section>
+                
+                
                 <section>
                     <section>
                         <h2>Beispiele von Open-Source-Anwendungen</h2>
                     </section>
-                    <section>
-                        <h2>CollectiveAccess</h2>
-                        <ul>
+                    <section>                        
+                        <ul style="list-style-type:none">
+                            <li><h3>CollectiveAccess</h3></li>
                             <li><a href="https://collectiveaccess.org/">https://collectiveaccess.org/</a></li>
                             <li><a href="https://github.com/collectiveaccess">https://github.com/collectiveaccess</a></li>
                                 <ul><li><a href="https://github.com/collectiveaccess/providence/blob/master/License.txt">Lizenz</a></li></ul>
@@ -256,8 +296,8 @@
                         </aside>
                     </section>
                     <section>
-                        <h2>Omeka</h2>
-                        <ul>
+                        <ul style="list-style-type:none">
+                            <li><h3>Omeka</h3></li>
                             <li><a href="https://omeka.org/" data-preview-link>Omeka</a></li>
                             <li><a href="https://github.com/omeka">Omeka auf GitHub</a></li>
                         </ul>
@@ -266,12 +306,28 @@
                         </aside>
                     </section>
                     <section>
-                        <p>WordPress</p>
+                        <ul style="list-style-type:none">
+                            <li><h3>WordPress</h3></li>
+                            <li><a href="https://wordpress.org/">wordpress.org</a></li>
+                            <li><a href="https://codex.wordpress.org/">codex.wordpress.org</a></li>
+                            <li><a href="https://github.com/WordPress/WordPress">WordPress auf GitHub</a></li>
+                        </ul>
                         <aside class="notes">
                             My notes.
                         </aside>
                     </section>
                     <section>
+                        <ul style="list-style-type:none">
+                            <li><h3>Wikibase</h3></li>
+                            <li><a href="https://wikiba.se/" data-preview-link>wikiba.se</a></li>
+                            <li><a href="https://phabricator.wikimedia.org/diffusion/EWBA/">Wikibase Repository Sourcecode</a></li>
+                            <li><a href="https://www.mediawiki.org/wiki/Extension:Wikibase_Repository">Documentation</a></li>
+                        </ul>
+                        <aside class="notes">
+                            My notes.
+                        </aside>
+                    </section>
+                    <!--section>
                         <p>Archivematica</p>
                         <aside class="notes">
                             My notes.
@@ -282,10 +338,17 @@
                         <aside class="notes">
                             My notes.
                         </aside>
-                    </section>
+                    </section-->
                 </section>
+                
+                
                 <section>
                     <section>
+                        <h2>Referenzen</h2>
+                        <p align="left" class="hangingindent">Grassmuck, Volker: <em>Freie Software: Zwischen Privat- und Gemeineigentum</em>. Bundeszentrale für politische Bildung, Bonn, 2002.<br/><small class="hangingindent"><a href="http://freie-software.bpb.de/">http://freie-software.bpb.de/</a> (letzter Aufruf am 2019-08-22)</small></p>
+                        <p align="left" class="hangingindent">Raymond, Eric S.: <em>The Cathedral and the Bazaar</em>. 2000.<br/><small class="hangingindent"><a href="http://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/">http://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/</a> (letzter Aufruf am 2019-08-22)</small></p>
+                    </section>
+                    <!--section>
                         <h2>Referenzen und weiterführende Links</h2>
                     </section>
                     <section>
@@ -297,21 +360,24 @@
                         <h3>Links</h3>
                         <p align="left"><a href="https://wiki.opensourceecology.de/Vorteile/Nachteile_von_Open_Source_Software">Vorteile/Nachteile von Open Source Software</a><br />
                     <small>(Letzter Aufruf am 2019-08-27)</small></p>  
-                    </section>
+                    </section-->
                 </section>
                 <section>
                     <p style="font-weight: bold !important; font-size: 1.5em !important;">
-                        Vielen Dank für Ihre Aufmerksamkeit!
+                        Vielen Dank<br />für Ihre Aufmerksamkeit!
                     </p>
                     <p>&nbsp;</p>
-                    <p align="left">
+                    <p>Die Folien sind online:</p>
+                    <p style="font-size: 1.5em !important;">https://git.io/fjxfP</p>
+                    <p>https://hgkuper.github.io/presentations/oss</p>
+                    <!--p align="left">
                         Die Folien sind online:
-                        <ul>
+                        <ul style="list-style-type:none">
                             <li style="font-size: 1.5em !important;">https://git.io/fjxfP</li>
                             <li>https://hgkuper.github.io/presentations/oss</li>
                             <li>PDF-Version</li>
                         </ul>
-                    </p>
+                    </p-->
                 </section>
                 <section>
                     <h2>CC BY 4.0</h2>
