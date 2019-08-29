@@ -54,8 +54,13 @@
                             </small>
                         </p>
                         <aside class="notes">
-                            Ich verwende viel Open Source bei der Entwicklung und bei der Arbeit (LibreOffice)<br />
-                            HyperImage: Zusammen mit einem Kollegen bin ich selber Open Source Maintainer von einem bescheidenen Projekt</aside>
+                            <ul>
+                                <li>Kurzer Vortrag, soll als Diskussionsgrundlage dienen.</li>
+                                <li>Ich bin ein leidenschaftlicher Nutzer von Open Source, wenn nicht sogar ein Verfechter, und wenn Apple so weiter mache wechsele ich zurück zu Linux.</li>
+                                <li>Ich verwende viel Open Source bei der Entwicklung und bei der Arbeit (LibreOffice)</li>
+                                <li>HyperImage: Zusammen mit einem Kollegen bin ich selber Open Source Maintainer von einem bescheidenen Projekt</li>
+                            </ul>
+                            </aside>
                     </section>
                     <section>
                         <h3>Übersicht</h3>
@@ -66,6 +71,11 @@
                             <li>Merkmale eines vertrauenswürdigen Open-Source-Projekts</li>
                             <li>Beispiele von Open-Source-Anwendungen</li>
                         </ol>
+                        <aside class="notes">
+                            <ul>
+                                <li>Ein sehr breites Thema, wir könnten uns Tage lang damit beschäftigen.</li>
+                            </ul>
+                        </aside>
                     </section>
                 </section>
 
@@ -74,16 +84,21 @@
                     <section>
                         <h2>Was ist Open-Source-Software?</h2>
                         <aside class="notes">
-                            Schnell Durchlauf des Themas, Links und Hinweise auf weiterführende Informationen.
+                            <ul>
+                                <li>Schnell Durchlauf des Themas, Links und Hinweise auf weiterführende Informationen.</li>
+                            </ul>
                         </aside>
                     </section>
                     <section>
                         <iframe class="stretch" data-src="https://de.wikipedia.org/wiki/Open_Source"></iframe>
                         <small>Quelle: <a href="https://de.wikipedia.org/wiki/Open_Source">https://de.wikipedia.org/wiki/Open_Source</a></small>
                         <aside class="notes">
-                            <p>Eine Definition, aus Wikipedia (Open-Source-Wissen verteilt auf Open-Source-Software).</p>
-                            <p>OSI: Open Source Initiative</p>
-                            <p>Um zu verstehen, was OSS ist, ist es hilfreich die Geschichte des Begriffs zu verstehen.</p>
+                            <ul>
+                                <li>Das Gebiet abstecken, was ist es, was ist es nicht.</li>
+                                <li>Eine Definition, aus Wikipedia (Open-Source-Wissen verteilt auf Open-Source-Software).</li>
+                                <li>OSI: Open Source Initiative</li>
+                                <li>Um zu verstehen, was OSS ist, ist es hilfreich die Geschichte des Begriffs zu verstehen.</li>
+                            </ul>
                         </aside>
                     </section>
                     <section>
@@ -91,10 +106,22 @@
                     </section>
                     <section>
                         <quote>"The conferees believed the <em>pragmatic, business-case grounds</em> that had motivated Netscape to release their code illustrated a valuable way to engage with potential software users and developers, and convince them to create and improve source code by participating in an engaged community."</quote>
+                        <aside class="notes">
+                            <ul>
+                                <li>Open-Source ist ein vorstandstauglicher Begriff.</li>
+                                <li>Community-Gedanke ist kern des Konzepts.</li>
+                            </ul>
+                        </aside>
                     </section>
                     <section>
                         <p><quote>"The conferees also believed that it would be useful to have a single label that identified this approach and distinguished it from the philosophically- and politically-focused label 'free software.'"</quote></p>
                         <p><small>Quelle: <a href="https://opensource.org/history">https://opensource.org/history</a> (Letzter Aufruf: 2019-08-27)</small></p>
+                        <aside class="notes">
+                            <ul>
+                                <li>Richard Stallmann prägte den Begriff "Free Software".</li>
+                                <li>Um das Konzept von OSS besser zu verstehen, lohnt sich einen Blick in die Geschichte… [NEXT SLIDE]</li>
+                            </ul>
+                        </aside>
                     </section>
                     <section>
                         <!--iframe class="stretch" data-src="https://groups.google.com/forum/m/?#!msg/comp.os.minix/dlNtH7RRrGA/SwRavCzVE7gJ"></iframe-->
@@ -104,13 +131,15 @@
                         <aside class="notes">
                             <ul>
                                 <li>Startschuss von Linux vor 28 Jahren.</li>
+                                <small>
                                 <li>https://en.wikipedia.org/wiki/MINIX</li>
                                 <ul>
-                                    <li>"MINIX (from "mini-Unix") is a POSIX-compliant (since version 2.0),[3][4] Unix-like operating system based on a microkernel architecture. Early versions of MINIX were created by Andrew S. Tanenbaum for educational purposes."</li>
+                                    <li>"MINIX (from "mini-Unix") is a […] Unix-like operating system based on a microkernel architecture. Early versions of MINIX were created by Andrew S. Tanenbaum for educational purposes."</li>
                                 </ul>
                                 <li>https://en.wikipedia.org/wiki/IBM_Personal_Computer/AT</li>
                                 <ul>
-                                    <li>"The <b>IBM Personal Computer AT</b>, more commonly known as the IBM AT and also sometimes called the PC AT or PC/AT, was IBM's second-generation PC, designed around the 6 MHz Intel 80286 microprocessor and released in 1984 as System Unit 5170. The name AT stood for "<b>Advanced Technology</b>," and was chosen because the AT offered various technologies that were then new in personal computers[…]"</li>
+                                    <li>"The <b>IBM Personal Computer AT</b>, more commonly known as the IBM AT and also sometimes called the PC AT or PC/AT, was IBM's second-generation PC […]. The name AT stood for "<b>Advanced Technology</b>," and was chosen because the AT offered various technologies that were then new in personal computers[…]"</li>
+                                </small>
                                 </ul>
                             </ul>
                         </aside>
@@ -120,7 +149,7 @@
                             <p>"[M]ost important software […] needed to be built like <em>cathedrals</em>, carefully crafted by individual wizards or small bands of mages working in splendid isolation, with no beta to be released before its time.</p>
                             <p>[…T]he Linux community seemed to resemble a great babbling <em>bazaar</em> of differing agendas and approaches […] out of which a coherent and stable system could seemingly emerge only by a succession of miracles."</p>
                         </quote>
-                        <small>Quelle: <a href="http://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/cathedral-bazaar.ps"><i>The Cathedral and the Bazaar</i></a>, Eric S. Raymond, S. 2–3<br />
+                        <small>Quelle: <a href="http://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/cathedral-bazaar.ps"><em>The Cathedral and the Bazaar</em></a>, Eric S. Raymond, S. 2–3<br />
                         (Erst vorgestellt am 1997-05-27 beim Linux Kongress in Würzburg)</small>
                         <aside class="notes">
                             Der Essay hat Netscape dazu bewegt, den Quellcode für den Netscape Communicator offen zu stellen, was dann durch Mozilla weitergeführt worden ist.
@@ -181,7 +210,7 @@
                         <iframe class="stretch" data-src="https://en.wikipedia.org/wiki/Comparison_of_free_and_open-source_software_licenses"></iframe>
                         <small>Quelle: <a href="https://en.wikipedia.org/wiki/Comparison_of_free_and_open-source_software_licenses">https://en.wikipedia.org/wiki/Comparison_of_free_and_open-source_software_licenses</a></small>
                         <aside class="notes">
-                            My notes.
+                            Wichtiger für Entwickler als Anwender, aber ich finde es schon relevant (und wichtig) die Lizenzvielfalt zur Kenntnis nehmen.
                         </aside>
                     </section>
                     <section>
@@ -220,6 +249,7 @@
                         <a href="https://moodle.com/partners/" data-preview-link>Moodle Partners</a>
                         <aside class="notes">
                             <ul>
+                                <li>Grosse Projekte sind Selbstäufer, die kleineren müssen etwas erfindungsreicher sein.</li>
                                 <li>Partner zahlen Geld an Moodle um eine Zertifizierung zu erhalten.</li>
                                 <li>Von Martin Dougiamas ins Leben gerufen. (https://en.wikipedia.org/wiki/Moodle)</li>
                             </ul>
@@ -230,6 +260,15 @@
                         <p>Basis- bzw. ältere Version kostenlos, aber aktuelle bzw. erweiterte Version nur gegen Geld.</p>
                         <aside class="notes">
                             https://de.wikipedia.org/wiki/Freemium
+                        </aside>
+                    </section>
+                    <section>
+                        <h3>Framework/Plugin-Architektur</h3>
+                        <p>Framework ist kostenlos, aber Plugins/Erweiterungen müssen nicht kostenlos sein.</p>
+                        <aside class="notes">
+                            <ul>
+                                <li>So macht es WordPress</li>
+                            </ul>
                         </aside>
                     </section>
                     <section>
@@ -292,7 +331,9 @@
                             <li><a href="http://collectiveaccesscommunity.org">http://collectiveaccesscommunity.org</a></li>                            
                         </ul>
                         <aside class="notes">
-                            My notes.
+                            <ul>
+                                <li>Lizenz: GNU General Public License v3.0</li>
+                            </ul>
                         </aside>
                     </section>
                     <section>
@@ -302,7 +343,9 @@
                             <li><a href="https://github.com/omeka">Omeka auf GitHub</a></li>
                         </ul>
                         <aside class="notes">
-                            Lizenz: GPL
+                            <ul>
+                                <li>Omeka-S-Lizenz: GNU General Public License v3.0</li>
+                            </ul>
                         </aside>
                     </section>
                     <section>
@@ -313,7 +356,10 @@
                             <li><a href="https://github.com/WordPress/WordPress">WordPress auf GitHub</a></li>
                         </ul>
                         <aside class="notes">
-                            My notes.
+                            <ul>
+                                <li>Lizenz: GNU GENERAL PUBLIC LICENSE Version 2, June 1991</li>
+                                <li>Firmen können Geld durch die Entwicklung von Plugins verdienen</li>
+                            </ul>
                         </aside>
                     </section>
                     <section>
@@ -324,7 +370,9 @@
                             <li><a href="https://www.mediawiki.org/wiki/Extension:Wikibase_Repository">Documentation</a></li>
                         </ul>
                         <aside class="notes">
-                            My notes.
+                            <ul>
+                                <li>GPL-2.0 or later (according to https://en.wikipedia.org/w/index.php?title=Wikibase&oldid=912827101 and footer of repo.)</li>
+                            </ul>
                         </aside>
                     </section>
                     <!--section>
