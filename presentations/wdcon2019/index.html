@@ -1,0 +1,461 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Reinstating Female Artists to the Cultural Record via Wikidata</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+        <!--link rel="stylesheet" href="css/theme/black.css"-->
+        <!--link rel="stylesheet" href="css/theme/white.css"-->
+        <link rel="stylesheet" href="plugin/title-footer/title-footer.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+        
+        <!-- my adaptaions -->
+        <link rel="stylesheet" href="css/hgkuper.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+                <section data-state="no-title-footer">
+                    <a href="https://www.wikidata.org/wiki/Wikidata:WikidataCon_2019"><img src="images/logos/WikidataCon%202019%20logo.png" height="140px" style="box-shadow: none !important;"/></a>
+                    <p style="font-size: 1.5em;">Reinstating Female Artists to the Cultural Record via Wikidata</p>
+                    <p><a href="https://www.wikidata.org/wiki/Wikidata:WikidataCon_2019">WikidataCon 2019</a>, 2019-10-25</p>
+                    <p>
+                        <small>
+                            Heinz-Günter Kuper<br />&lt;<a href="mailto:kuper@zib.de">kuper@zib.de</a>&gt; &lt;<a href="https://www.wikidata.org/wiki/User_talk:Hgkuper">User:Hgkuper</a>&gt;<br/>
+                            <a href="https://orcid.org/0000-0003-0743-3346">https://orcid.org/0000-0003-0743-3346</a><br/>
+                        </small>
+                    </p>
+                </section>
+                
+                <section>
+                    <section>
+                    <p style="font-size: 2em;">Who dis?</p>
+                    <a href="https://www.digis-berlin.de/"><img src="images/logos/digiS_2018_weboptimiert.jpg" height="120"/></a>
+                    <p>digiS supports institutions in making Berlin's cultural heritage long-term digitally available, publicly accessible and reusable for all.</p>
+                    <p>
+                        <a href="https://www.zib.de/"><img src="images/logos/ZIB_Logo_seitlich_farbe.png" height="120" style="float: left;"/></a>
+                        <a href="https://www.berlin.de/sen/kultur/"><img src="images/logos/SenKE_rot_quer.png" width="300" style="float: right;"/></a>
+                    </p>
+                    <aside class="notes">
+                        <ul>
+                            <li>Provide services and research relevant issues.</li>
+                            <li>Long-term digital preservation.</li>
+                            <li>Ensure high-quality metadata.</li>
+                        </ul>
+                    </aside>
+                    </section>
+                    <section>
+                        <p style="text-align: left;">Standard Operating Procedure:<br />Ingest of metadata into the <em>Deutsche Digitale Bibliothek</em> (German Digital Library)<br />(and also into Europeana, depending on the metadata licensing).</p>
+                        <aside class="notes">
+                            <ul>
+                                <li>digiS investigates new possiblities for the provision of metadata and data.</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <p>We are not just interested in the presentation of data on a website,…</p>
+                    </section>
+                    <section>
+                        <p>… but also want machines to be able to process the data (esp. in terms of search).</p>
+                        <aside class="notes">
+                            Which is why we were interesting in research Wikidata as another possible avenue to publish metadata.
+                        </aside>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Authority Control, …</h2>
+                        <aside class="notes">
+                            <ul>
+                                <li>Introduce the protagonists…</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <p>"In library science, authority control is a process that organizes bibliographic information, for example in library catalogs by using a single, distinct spelling of a name (heading) or a numeric identifier for each topic."</p>
+                        <p style="font-size: small">Source: <a href="https://en.wikipedia.org/w/index.php?title=Authority_control&oldid=915482652">https://en.wikipedia.org/w/index.php?title=Authority_control&amp;oldid=915482652</a></p> 
+                    </section>
+                    <section>
+                        <iframe class="stretch" data-src="http://d-nb.info/gnd/7749153-1"></iframe>
+                        <p style="font-size: small">Source: <a href="http://d-nb.info/gnd/7749153-1">http://d-nb.info/gnd/7749153-1</a></p>
+                        <aside class="notes">
+                            <ul>
+                                <li>Normdatei: http://d-nb.info/gnd/4239774-1</li>
+                                <li>Vorteile: Eindeutigkeit, Qualitat (insb. bzgl. Schreibfehler) => Suchbarkeit</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <img src="images/GND4C.png"/>
+                        <p style="font-size: small">Source: <a href="https://www.dnb.de/DE/Professionell/ProjekteKooperationen/Projekte/GND4C/gnd4c.html">https://www.dnb.de/DE/Professionell/ProjekteKooperationen/Projekte/GND4C/gnd4c.html</a></p>
+                        <aside class="notes">
+                            Normdaten traditionell hauptsächlich von Bibliotheken verwendet, jetzt aber zunehmend für GLAMs im Sinne der Kulturdaten von Interesse.
+                        </aside>
+                    </section>
+                </section>   
+                
+                <section>
+                    <section>
+                        <h2>Malweiber</h2>
+                    </section>
+                    <section>
+                        Who were the Malweiber?
+                    </section>
+                    <section>
+                        <img src="images/Stadt_der_Frauen.png" height="580" style="margin: 0; padding: 0; border: 0;" />
+                        <p style="font-size: small">Source: <a href="https://www.stadtmuseum.de/ausstellungen/berlin-stadt-der-frauen">https://www.stadtmuseum.de/ausstellungen/berlin-stadt-der-frauen</a><br />See also: <a href="https://www.wikidata.org/wiki/Q30156502">Berlin – City of Women (Q30156502)</a></p>
+                        <aside class="notes">
+                            Temporary exhibition in 2016.
+                        </aside>
+                    </section>
+                    <section>
+                        <iframe class="stretch" data-src="https://www.digis-berlin.de/projektpartner/archiv/archiv2016/#tab-tab-4243-2-0-0-4243-11"></iframe>
+                        <p style="font-size: small">Source: <a href="https://www.digis-berlin.de/projektpartner/archiv/archiv2016/">https://www.digis-berlin.de/projektpartner/archiv/archiv2016/</a></p>
+                    </section>
+                    <section>
+                        <iframe class="stretch" data-src="https://www.wikidata.org/wiki/Wikidata:Dataset_Imports/Previous_version_discussions#Berliner_Malweiber"></iframe>
+                        <p style="font-size: small">Source: <a href="https://www.wikidata.org/wiki/Wikidata:Dataset_Imports/Previous_version_discussions#Berliner_Malweiber">https://w.wiki/ALC</a></p>
+                        <aside class="notes">
+                            .
+                        </aside>
+                    </section>
+                    <section>
+                        <p style="text-align: left;"><strong>Hgkuper</strong><br />
+                        <div style="text-align: left; font-size:0.9em;">Please restore the following items. They are all artists with paintings in the collection of the Stadtmuseum Berlin and are part of […] an import which was interrupted but hopefully can now be completed in the coming weeks.<br />[…]</div></p>
+                        <p style="text-align: left"><strong>ValterVB</strong><br />
+                        <div style="text-align: left; font-size:0.9em;">No source, no sitelink, no backlink no data to understand who they are. I waited a while, then I canceled. Now if you add some reference I can restore them, but if they remain in the same state, it makes no sense to restore them.</div></p>
+                        <p style="font-size: small ;">Source: <a href="https://w.wiki/ALP">https://w.wiki/ALP</a></p>
+                        <aside class="notes">
+                            23 deletions
+                        </aside>
+                    </section>
+                    <section>
+                        <p style="text-align: left;"><strong>Hgkuper</strong><br />
+                        <div style="text-align: left; font-size:0.9em;">[…]Wikidata at the time of writing [2018-09-22] contains 50.291.192 items. By my calculations 1.142.667 items have been deleted since the creation of Wikidata, which represents about 2% of Wikidata.[…]</div></p>
+                        
+                        <p style="font-size: small ;">Source: <a href="https://w.wiki/ALP">https://w.wiki/ALP</a></p>
+                        <aside class="notes">
+                            Delete spam, but the rest should be sent for arbitration. Still haven't heard a good rebuttal.
+                        </aside>
+                    </section>
+                    <section>
+                        <iframe class="stretch" data-src="https://www.wikidata.org/wiki/Wikidata:Notability"></iframe>
+                        <p style="font-size: small ;">Source: <a href="https://www.wikidata.org/wiki/Wikidata:Notability">https://www.wikidata.org/wiki/Wikidata:Notability</a></p>
+                        <aside class="notes">
+                            Just as a reminder, here are the notability criteria (see point 2).
+                        </aside>
+                    </section>
+                    <section>
+                        <h4>(Female) Artists ohne GND-ID</h4>
+                        <iframe class="stretch" data-src="https://w.wiki/ALi"></iframe>
+                        <p style="font-size: small">Source: <a href="https://w.wiki/ALi">https://w.wiki/ALi</a></p>
+                        <aside class="notes">
+                            19 artists.
+                        </aside>
+                    </section>
+                    <section>
+                        <h4>Ida Maurer-Hahn</h4>
+                        <iframe class="stretch" data-src="https://www.wikidata.org/wiki/Q44915133"></iframe>
+                        <p style="font-size: small">Source: <a href="https://www.wikidata.org/wiki/Q44915133">https://www.wikidata.org/wiki/Q44915133</a></p>
+                        <aside class="notes">
+                            Keine GND-ID
+                        </aside>
+                    </section>
+                    <section>
+                        <h4>Ida Maurer-Hahn</h4>
+                        <iframe class="stretch" data-src="https://www.wikidata.org/wiki/Q57081659"></iframe>
+                        <p style="font-size: small">Source: <a href="https://www.wikidata.org/wiki/Q57081659">https://www.wikidata.org/wiki/Q57081659</a></p>
+                        <aside class="notes">
+                            Und kein weiterer Nachweis online (kein Bild in Sammlung Online).
+                        </aside>
+                    </section>
+                </section>
+                
+                <section>
+                    <section>
+                        <iframe class="stretch" data-src="https://en.wikipedia.org/wiki/Chief_data_officer"></iframe>
+                        <p style="font-size: small">Source: <a href="https://en.wikipedia.org/wiki/Chief_data_officer">https://en.wikipedia.org/wiki/Chief_data_officer</a></p>
+                        <aside class="notes">
+                            <ul>
+                                <li>.</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <img src="images/1024px-Rainbow_Rose_%283366550029%29.jpg" width="900" style="margin: 0; padding: 0; border: 0;" />
+                        <div style="font-size: x-small; text-align: right;"><a href="https://commons.wikimedia.org/wiki/File:Rainbow_Rose_(3366550029).jpg">Lucy Roberts from Bartlesville, OK<br />via Wikimedia Commons</a> <a href="https://creativecommons.org/licenses/by/2.0">[CC BY 2.0]</a></div>
+                        <aside class="notes">
+                            A rose by any other name would smell as sweet (https://en.wikipedia.org/wiki/A_rose_by_any_other_name_would_smell_as_sweet)
+                        </aside>
+                    </section>
+                    <section>
+                        <ul>
+                            <li><strong>Data Governance</strong>: Steuerung der Datenverwendung</li>
+                            <li><strong>Data Architecture</strong>: Konzeption und Planung der Datenquellen und Datenkonsumenten</li>
+                            <li><strong>Data Quality</strong>: Sicherstellung der inhaltlichen Qualität der Daten</li>
+                        </ul>
+                        <p style="font-size: small">Source: <a href="https://de.wikipedia.org/w/index.php?title=Chief_Data_Officer&oldid=181765449">https://de.wikipedia.org/w/index.php?title=Chief_Data_Officer&oldid=181765449</a></p>
+                        <aside class="notes">
+                            <ul>
+                                <li>Stellt technische Kompetenzen und Datenkompetenz voraus</li>
+                                <li>Gespür für mögliche Nutzungsarten (Forschung, Museum Guides, etc.)</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <h3>Datenqualität</h3>
+                        <p style="float: left;">Dafür Sorge tragen, dass bei diversen BearbeiterInnen bspw.</p>
+                        <ul>
+                            <li>einheitliche Maßangaben und</li>
+                            <li>kontrollierte Vokabulare</li>
+                        </ul>
+                        <p>Verwendung finden unter Beachtung von Standards.</p>
+                    </section>
+                </section>
+                
+                <section>
+                    <section>
+                        <h2>Wikibase</h2>
+                        <aside class="notes">
+                            The hero of our story, and my suggestion for a possible solution.
+                        </aside>
+                    </section>
+                    <section>
+                        <img src="images/Wikibase_wbkgnd.png" height="600"/>
+                    </section>
+                    <section>
+                        <p>DIY Authority Control (or controlled vocabulary…)</p>
+                    </section>
+                </section>
+                
+                <section>
+                    <p style="font-size: 2em;">digiS Annual Conference 2019<br />
+                        "<em>WerteDaten – DatenWerte</em>"
+                    </p>
+                    <p>2019-12-05, Zuse Institute Berlin</p>
+                    <p>Details (in German):<br /><a href="https://www.digis-berlin.de/digis/veranstaltungen/digis-jahreskonferenzen/#tab-tab-4877-1-0-0-4877-0">https://tinyurl.com/digiS-JK2019</a></p>
+                </section>
+ 
+                <section>
+                    <p style="font-weight: bold !important; font-size: 1.5em !important;">
+                        Thank You<br />for Your Attention!
+                    </p>
+                    <p>&nbsp;</p>
+                    <p>The slides are online:</p>
+                    <p style="font-weight: bold !important; font-size: 1.5em !important;"><a href="https://git.io/JeRPY">https://git.io/</a></p>
+                    <p style="font-size: small;">https://hgkuper.github.io/presentations/wdcon2019</p>
+                </section>
+                
+                <section>
+                    <h4>Further Reading</h4>
+                    <section>
+                        <ul style="list-style-type: none;">
+                            <li><em>Invisible Women: Exposing Data Bias in a World Designed for Men</em></li>
+				            <li>Author: Caroline Criado Perez</li>
+				            <li>Imprint: Chatto & Windus</li>
+				            <li>Published: 2019-03-07</li>
+				            <li>ISBN: 9781784741723</li>
+                            <li style="font-size: 0.5em;"><a href="https://www.penguin.co.uk/books/111/1113605/invisible-women/9781784741723.html">https://www.penguin.co.uk/books/111/1113605/invisible-women/9781784741723.html</a></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <iframe class="stretch" data-src="http://www.artnews.com/2015/05/30/why-have-there-been-no-great-women-artists/"></iframe>
+                        <p style="font-size: small">Source: <a href="http://www.artnews.com/2015/05/30/why-have-there-been-no-great-women-artists/">http://www.artnews.com/2015/05/30/why-have-there-been-no-great-women-artists/</a></p>
+                        <aside class="notes">
+                            Ein Artikel von Linda Nochlin, ursprünglich in 1971 veröffentlicht.
+                        </aside>
+                    </section>
+                </section>
+                
+                <section>
+                    <p>Thanks to <a href="https://hakim.se/">Hakim El Hattab</a> for coding <a href="https://github.com/hakimel/reveal.js">Reveal.js</a>!</p>
+                </section>
+                
+                <section>
+                    <h2>CC BY 4.0</h2>
+                    <p>
+                        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+                    </p>
+                </section>
+			</div>
+        </div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true },                    
+                    { src: 'plugin/zoom-js/zoom.js', async: true }, // Zoom in and out with Alt+click
+                    { src: 'plugin/title-footer/title-footer.js', async: true, callback: function() { title_footer.initialize("Reinstating Female Artists to the Cultural Record via Wikidata | WikidataCon 2019, 2019-10-25 | Heinz-Günter Kuper | CC BY 4.0"); } }
+				],
+                // added by HGK
+                // Display presentation control arrows
+                controls: false,
+
+                // Help the user learn the controls by providing hints, for example by
+                // bouncing the down arrow when they first encounter a vertical slide
+                controlsTutorial: false,
+
+                // Determines where controls appear, "edges" or "bottom-right"
+                controlsLayout: 'bottom-right',
+
+                // Visibility rule for backwards navigation arrows; "faded", "hidden"
+                // or "visible"
+                controlsBackArrows: 'faded',
+
+                // Display a presentation progress bar
+                progress: true,
+
+                // Display the page number of the current slide
+                slideNumber: true,
+
+                // Add the current slide number to the URL hash so that reloading the
+                // page/copying the URL will return you to the same slide
+                hash: true,
+
+                // Push each slide change to the browser history. Implies `hash: true`
+                history: false,
+
+                // Enable keyboard shortcuts for navigation
+                keyboard: true,
+
+                // Enable the slide overview mode
+                overview: true,
+
+                // Vertical centering of slides
+                center: true,
+
+                // Enables touch navigation on devices with touch input
+                touch: true,
+
+                // Loop the presentation
+                loop: false,
+
+                // Change the presentation direction to be RTL
+                rtl: false,
+
+                // See https://github.com/hakimel/reveal.js/#navigation-mode
+                navigationMode: 'default',
+
+                // Randomizes the order of slides each time the presentation loads
+                shuffle: false,
+
+                // Turns fragments on and off globally
+                fragments: true,
+
+                // Flags whether to include the current fragment in the URL,
+                // so that reloading brings you to the same fragment position
+                fragmentInURL: false,
+
+                // Flags if the presentation is running in an embedded mode,
+                // i.e. contained within a limited portion of the screen
+                embedded: false,
+
+                // Flags if we should show a help overlay when the questionmark
+                // key is pressed
+                help: true,
+
+                // Flags if speaker notes should be visible to all viewers
+                showNotes: false,
+
+                // Global override for autoplaying embedded media (video/audio/iframe)
+                // - null: Media will only autoplay if data-autoplay is present
+                // - true: All media will autoplay, regardless of individual setting
+                // - false: No media will autoplay, regardless of individual setting
+                autoPlayMedia: null,
+
+                // Global override for preloading lazy-loaded iframes
+                // - null: Iframes with data-src AND data-preload will be loaded when within
+                //   the viewDistance, iframes with only data-src will be loaded when visible
+                // - true: All iframes with data-src will be loaded when within the viewDistance
+                // - false: All iframes with data-src will be loaded only when visible
+                preloadIframes: null,
+
+                // Number of milliseconds between automatically proceeding to the
+                // next slide, disabled when set to 0, this value can be overwritten
+                // by using a data-autoslide attribute on your slides
+                autoSlide: 0,
+
+                // Stop auto-sliding after user input
+                autoSlideStoppable: true,
+
+                // Use this method for navigation when auto-sliding
+                autoSlideMethod: Reveal.navigateNext,
+
+                // Specify the average time in seconds that you think you will spend
+                // presenting each slide. This is used to show a pacing timer in the
+                // speaker view
+                defaultTiming: 60,
+
+                // Enable slide navigation via mouse wheel
+                mouseWheel: false,
+
+                // Hide cursor if inactive
+                hideInactiveCursor: true,
+
+                // Time before the cursor is hidden (in ms)
+                hideCursorTime: 5000,
+
+                // Hides the address bar on mobile devices
+                hideAddressBar: true,
+
+                // Opens links in an iframe preview overlay
+                // Add `data-preview-link` and `data-preview-link="false"` to customise each link
+                // individually
+                previewLinks: false,
+
+                // Transition style
+                transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+                // Transition speed
+                transitionSpeed: 'default', // default/fast/slow
+
+                // Transition style for full page slide backgrounds
+                backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
+
+                // Number of slides away from the current that are visible
+                viewDistance: 3,
+
+                // Parallax background image
+                parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+                // Parallax background size
+                parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px"
+
+                // Number of pixels to move the parallax background per slide
+                // - Calculated automatically unless specified
+                // - Set to 0 to disable movement along an axis
+                parallaxBackgroundHorizontal: null,
+                parallaxBackgroundVertical: null,
+
+                // The display mode that will be used to show slides
+                display: 'block'
+			});
+		</script>
+	</body>
+</html>
